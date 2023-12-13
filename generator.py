@@ -80,10 +80,10 @@ class init:
                 Chat = 1
                 for Proxy in Proxies:
                     Proxy = Proxy.split(':')
-                    Raid = Thread(target=Generator,args=(Chat, Proxy))
-                    Raid.daemon = True
+                    Gen = Thread(target=Generator,args=(Chat, Proxy))
+                    Gen.daemon = True
                     try:
-                        Raid.start()
+                        Gen.start()
                     except: 
                         print("Protocol Error")
 obj = init()
