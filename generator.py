@@ -7,7 +7,7 @@ import sys
 import os
 import requests
 from tls_client import Session
-class Raider:
+class Generator:
         def __init__(self, Chat, Proxy):
                 self.IP, self.Port = Proxy[0], int(Proxy[1])
                 self.Connect()
@@ -80,7 +80,7 @@ class init:
                 Chat = 1
                 for Proxy in Proxies:
                     Proxy = Proxy.split(':')
-                    Raid = Thread(target=Raider,args=(Chat, Proxy))
+                    Raid = Thread(target=Generator,args=(Chat, Proxy))
                     Raid.daemon = True
                     try:
                         Raid.start()
