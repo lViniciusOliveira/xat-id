@@ -75,7 +75,7 @@ class init:
                 exit()
                 
         def Start(self):
-                #self.check_proxies_file()
+                self.check_proxies_file()
                 Proxies = open('proxies.txt', 'r').read() 
                 Proxies = Proxies.split('\n')
                 Chat = 1
